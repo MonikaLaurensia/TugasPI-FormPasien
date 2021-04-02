@@ -53,9 +53,8 @@ echo ubah ($_POST);
     <div class="pasien-form">
       <div class="form-title">Form Edit Data Pasien</div>
       <form method="post" action="">
-      <input type="hidden" name="id" value="<?= $psn["id"]; ?>">
         <div class="form-item">Field dengan (*) wajib diisi</div>
-
+        <input type="hidden" name="id" value="<?= $psn["id"]; ?>">
         <div class="form-item"><label for = "no_rk">No Rekam Medis* </label></div> 
         <input type="text" name="no_rk" id = "no_rk" required value="<?= $psn["no_rk"] ?>">
 
