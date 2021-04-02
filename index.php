@@ -2,6 +2,28 @@
 
 require "functions.php";
 
+
+//cek apakah tombol submit sudah ditekan atau belum
+if (isset($_POST['submit']) ){
+
+  //cek apakah data berhasil ditambahkan atau tidak
+  if (tambah ($_POST) > 0 ){
+    echo "
+        <script>
+          alert('Data Pasien Berhasil Ditambahkan!');
+          document.location.href = 'tampilTabel.php';
+        </script>
+    ";
+  } else {
+    echo "
+        <script>
+          alert('Data Pasien Gagal Ditambahkan!');
+          document.location.href = 'tampilTabel.php';
+        </script>
+    ";
+  }
+} 
+
 ?>
 
 <!DOCTYPE html>
