@@ -1,3 +1,35 @@
+<?php
+
+require "functions.php";
+
+//ambil data di URL
+$id = $_GET["id"];
+//query data mahasiswa berdasarkan id
+$psn = query("SELECT * FROM pasien WHERE id = $id")[0];
+
+//cek apakah tombol submit sudah ditekan atau belum
+if (isset($_POST['submit']) ){
+
+  //cek apakah data berhasil diedit atau tidak
+  if (ubah ($_POST) > 0 ){
+    echo "
+        <script>
+          alert('Data Pasien Berhasil Diedit!');
+          document.location.href = 'tampilTabel.php';
+        </script>
+    ";
+  } else {
+    echo "
+        <script>
+          alert('Data Pasien Gagal Diedit!');
+          document.location.href = 'tampilTabel.php';
+        </script>
+    ";
+  }
+echo ubah ($_POST);
+} 
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
