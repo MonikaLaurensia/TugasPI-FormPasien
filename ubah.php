@@ -64,7 +64,8 @@ echo ubah ($_POST);
        Field dengan tanda (*) wajib diisi.</div>
       </div>
       <form method="post" action="">
-
+        
+        <input type="hidden" name="id" value="<?= $psn["id"]; ?>">
         <div class="form-group">
           <div class="row mt-2">
           <div class="col-sm-1"></div>
