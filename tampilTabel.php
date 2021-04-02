@@ -1,3 +1,8 @@
+<?php 
+require 'functions.php'; 
+$pasien = query("SELECT * from pasien");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
