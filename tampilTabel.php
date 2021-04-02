@@ -45,7 +45,7 @@ $pasien = query("SELECT * from pasien");
     <tr>
         <td> <?= $i; ?> </td>
         <td>
-            <a href="ubah1.php?id=<?= $psn["id"]; ?>"><button type="submit" class="btn btn-info">Edit</button></a>
+            <a href="ubah.php?id=<?= $psn["id"]; ?>"><button type="submit" class="btn btn-info">Edit</button></a>
             <a href="hapus.php?id=<?= $psn["id"]; ?>"><button type="submit" class="btn btn-danger">Hapus</button></a>
         </td>
         <td><?= $psn["no_rk"]; ?></td>
